@@ -30,9 +30,7 @@ function App() {
               First Time in India
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              1-Day <span className="text-orange-500">Manga Art</span><br />
-              Certified<br />
-              Workshop
+              1-Day <span className="text-orange-500 mb-4">Manga Art</span><br />Certified Workshop
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-4xl mx-auto leading-relaxed">
               Learn authentic Japanese Manga Art techniques without traveling to Japan
@@ -179,7 +177,7 @@ function App() {
               </div>
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Ryoto is a skilled manga artist trained at <strong>Kyoto Seika University, Japan's only university
+                  Ryoto is a skilled manga artist represented by <strong>Kyoto Seika University, Japan's only university
                     with a dedicated Faculty of Manga</strong>. He brings authentic Japanese art techniques and global
                   creative insights to students in India.
                 </p>
@@ -218,9 +216,8 @@ function App() {
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  Kyoto Seika University is a trailblazing private arts university guided by principles of
-                  respect for humanity and freedom. It offers specialized faculties in Art, Design, Media Creation,
-                  Manga, and Global Culture.
+                  Kyoto Seika University is the world’s first university to promote Manga & Anime in Japan. Renowned for its faculties in Art, Design, Manga, Media Creation, and Global Culture, it blends tradition with innovation to inspire creativity worldwide.
+                  In collaboration with IACG Multimedia College, Kyoto Seika recently shared artistic expertise through a cultural exchange and student tour to Japan, giving learners a unique global creative experience.
                 </p>
 
                 <div className="bg-orange-50 p-6 rounded-2xl">
@@ -461,7 +458,7 @@ function App() {
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5" />
-                    <span>IACG Intermediate College, Jubilee Hills</span>
+                    <span>IACG Multimedia College, Jubilee Hills</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <IndianRupee className="w-5 h-5" />
@@ -522,7 +519,7 @@ function App() {
               <div className="space-y-3 text-gray-400">
                 <p><strong className="text-white">Date:</strong> 23rd August 2024</p>
                 <p><strong className="text-white">Time:</strong> 10 AM – 5 PM</p>
-                <p><strong className="text-white">Venue:</strong> IACG Intermediate College, Jubilee Hills</p>
+                <p><strong className="text-white">Venue:</strong> IACG Multimedia College, Jubilee Hills</p>
                 <p><strong className="text-white">Fee:</strong> ₹1,999 (Save ₹3,000)</p>
               </div>
             </div>
