@@ -1,17 +1,17 @@
 import React from 'react';
-import { 
-  CheckCircle, 
-  Calendar, 
-  MapPin, 
-  Clock, 
-  IndianRupee, 
-  GraduationCap, 
-  Users, 
-  Phone, 
-  Mail, 
-  Star, 
-  Award, 
-  BookOpen, 
+import {
+  CheckCircle,
+  Calendar,
+  MapPin,
+  Clock,
+  IndianRupee,
+  GraduationCap,
+  Users,
+  Phone,
+  Mail,
+  Star,
+  Award,
+  BookOpen,
   Palette
 } from 'lucide-react';
 import mentorImage from './assets/images/mentor.png';
@@ -37,10 +37,10 @@ function App() {
               Learn authentic Japanese Manga Art techniques without traveling to Japan
             </p>
             <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-              For the first time in Hyderabad, immerse yourself in the world of Manga with expert mentors from Japan. 
+              For the first time in Hyderabad, immerse yourself in the world of Manga with expert mentors from Japan.
               In just one day, discover the techniques, styles, and secrets that have shaped generations of Manga artists.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
@@ -80,7 +80,7 @@ function App() {
               Workshop <span className="text-orange-500">Highlights</span>
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="flex items-start gap-4 bg-white p-8 rounded-2xl shadow-lg">
               <CheckCircle className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
@@ -89,7 +89,7 @@ function App() {
                 <p className="text-gray-600">Learn from the mentors of Kyoto Seika University with authentic Japanese techniques</p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4 bg-white p-8 rounded-2xl shadow-lg">
               <CheckCircle className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
               <div>
@@ -97,7 +97,7 @@ function App() {
                 <p className="text-gray-600">Receive an official Certificate of Completion to enhance your portfolio</p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4 bg-white p-8 rounded-2xl shadow-lg">
               <CheckCircle className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
               <div>
@@ -105,7 +105,7 @@ function App() {
                 <p className="text-gray-600">Lunch & all workshop materials included - just bring your creativity!</p>
               </div>
             </div>
-            
+
             <div className="flex items-start gap-4 bg-white p-8 rounded-2xl shadow-lg">
               <CheckCircle className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
               <div>
@@ -163,12 +163,12 @@ function App() {
               Meet Your <span className="text-orange-500">Mentor</span>
             </h2>
           </div>
-          
+
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 shadow-xl border border-gray-100">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mb-8">
-                  <img src={mentorImage} alt="Mentor" className="w-29 h-29 rounded-full object-cover block mb-0.5 mr-0.5"/>
+                  <img src={mentorImage} alt="Mentor" className="w-29 h-29 rounded-full object-cover block mb-0.5 mr-0.5" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Ryoto</h3>
                 <div className="flex items-center gap-2 text-orange-500 mb-6">
@@ -178,13 +178,13 @@ function App() {
               </div>
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Ryoto is a skilled manga artist trained at <strong>Kyoto Seika University, Japan's only university 
-                  with a dedicated Faculty of Manga</strong>. He brings authentic Japanese art techniques and global 
+                  Ryoto is a skilled manga artist trained at <strong>Kyoto Seika University, Japan's only university
+                    with a dedicated Faculty of Manga</strong>. He brings authentic Japanese art techniques and global
                   creative insights to students in India.
                 </p>
                 <div className="mt-8 p-6 bg-orange-50 rounded-2xl">
                   <p className="text-orange-800 font-medium">
-                    "Learn the traditional manga techniques that have been passed down through generations 
+                    "Learn the traditional manga techniques that have been passed down through generations
                     of Japanese artists, combined with modern storytelling approaches."
                   </p>
                 </div>
@@ -202,7 +202,7 @@ function App() {
               About <span className="text-orange-500">Kyoto Seika University</span>
             </h2>
           </div>
-          
+
           <div className="bg-white rounded-3xl p-12 shadow-xl">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
@@ -215,30 +215,30 @@ function App() {
                     <p className="text-gray-600">Kyoto, Japan</p>
                   </div>
                 </div>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  Kyoto Seika University is a trailblazing private arts university guided by principles of 
-                  respect for humanity and freedom. It offers specialized faculties in Art, Design, Media Creation, 
+                  Kyoto Seika University is a trailblazing private arts university guided by principles of
+                  respect for humanity and freedom. It offers specialized faculties in Art, Design, Media Creation,
                   Manga, and Global Culture.
                 </p>
 
                 <div className="bg-orange-50 p-6 rounded-2xl">
                   <Award className="w-8 h-8 text-orange-500 mb-4" />
                   <p className="text-orange-800 font-semibold">
-                    The only university in Japan to have an entire Faculty of Manga
+                    The only university in Japan to have a Faculty of Manga
                   </p>
                 </div>
               </div>
-              
+
               <div>
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 text-white mb-8">
                   <h4 className="text-2xl font-bold mb-4">World-Class Recognition</h4>
                   <p className="text-orange-100 leading-relaxed">
-                    Closely connected to the Kyoto International Manga Museum, home to the world's largest 
+                    Closely connected to the Kyoto International Manga Museum, home to the world's largest
                     manga collection, reinforcing its leadership in manga culture and study.
                   </p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
                     <CheckCircle className="w-6 h-6 text-orange-500" />
@@ -270,7 +270,7 @@ function App() {
               Whether you're a complete beginner or an experienced artist, this workshop is designed for anyone passionate about manga art
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg">
               <GraduationCap className="w-12 h-12 text-orange-500 mb-6" />
@@ -281,7 +281,7 @@ function App() {
                 <li>• College application support</li>
               </ul>
             </div>
-            
+
             <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg">
               <Palette className="w-12 h-12 text-orange-500 mb-6" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Artists & Creators</h3>
@@ -291,7 +291,7 @@ function App() {
                 <li>• Digital/traditional artists</li>
               </ul>
             </div>
-            
+
             <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg">
               <Users className="w-12 h-12 text-orange-500 mb-6" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Enthusiasts</h3>
@@ -322,7 +322,7 @@ function App() {
               Frequently Asked <span className="text-orange-500">Questions</span>
             </h2>
           </div>
-          
+
           <div className="space-y-6">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -332,7 +332,7 @@ function App() {
                 No, you don't need any prior experience to join. This workshop is designed for both beginners and experienced artists.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 What materials or tools should I bring for the workshop?
@@ -341,7 +341,7 @@ function App() {
                 You don't need to bring anything. All materials and tools will be provided by us.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Will I receive a certificate after completing the workshop?
@@ -350,25 +350,25 @@ function App() {
                 Yes! You will receive an official certificate from Kyoto Seika University in collaboration with IACG College.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Who will be conducting the training, and what is their background?
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                The workshop is organized by IACG (International Academy of Computer Graphics) to promote Manga Art in India. 
-                IACG is a renowned multimedia institution with over 23 years of experience in Animation, VFX, Gaming, Art & Design, 
+                The workshop is organized by IACG (International Academy of Computer Graphics) to promote Manga Art in India.
+                IACG is a renowned multimedia institution with over 23 years of experience in Animation, VFX, Gaming, Art & Design,
                 Graphic Design, Filmmaking, UI/UX, and Digital Marketing.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We have contributed to blockbuster films like Baahubali 2, KGF 2, and RRR. IACG is also the only college in India 
+                We have contributed to blockbuster films like Baahubali 2, KGF 2, and RRR. IACG is also the only college in India
                 certified by the international body "The Rookies."
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Your mentor, Ryoto, is trained at Kyoto Seika University—Japan's only university with a dedicated Faculty of Manga.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 What age group can participate in this workshop?
@@ -388,10 +388,10 @@ function App() {
             Ready to Master Manga Art?
           </h2>
           <p className="text-xl md:text-2xl text-orange-100 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join hundreds of artists who have already transformed their creative journey. 
+            Join hundreds of artists who have already transformed their creative journey.
             Limited seats available!
           </p>
-          
+
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 mb-12">
             <div className="grid md:grid-cols-2 gap-8 text-left">
               <div>
@@ -416,7 +416,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-2xl font-bold mb-6">What's Included</h3>
                 <div className="space-y-3">
@@ -440,11 +440,11 @@ function App() {
               </div>
             </div>
           </div>
-          
+
           <button className="bg-white text-orange-500 hover:bg-gray-100 px-12 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8">
-            Register Now - ₹1,999 Only
+            Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
           </button>
-          
+
           <p className="text-orange-200">
             Questions? Call us at <span className="font-bold text-white">9100654072</span>
           </p>
@@ -458,11 +458,11 @@ function App() {
             <div>
               <h3 className="text-2xl font-bold mb-6">1-Day Manga Art Workshop</h3>
               <p className="text-gray-400 leading-relaxed">
-                Learn authentic Japanese Manga Art techniques from Kyoto Seika University-trained mentors 
+                Learn authentic Japanese Manga Art techniques from Kyoto Seika University-trained mentors
                 right here in Hyderabad.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold mb-6">Workshop Details</h4>
               <div className="space-y-3 text-gray-400">
@@ -472,7 +472,7 @@ function App() {
                 <p><strong className="text-white">Fee:</strong> ₹1,999 (Save ₹3,000)</p>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold mb-6">Contact Information</h4>
               <div className="space-y-3">
@@ -491,7 +491,7 @@ function App() {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400">
               © 2024 IACG International Academy of Computer Graphics. All rights reserved.
