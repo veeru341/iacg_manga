@@ -31,6 +31,7 @@ function App() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               1-Day <span className="text-orange-500">Manga Art</span><br />
+              Certified<br />
               Workshop
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-4xl mx-auto leading-relaxed">
