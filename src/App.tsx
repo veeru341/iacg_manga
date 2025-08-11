@@ -126,6 +126,59 @@ function App() {
         </div>
       </section>
 
+      {/* Key Takeaways */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Key <span className="text-orange-500">Takeaways</span> from the Workshop
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
+                <Palette className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">G-pen Experience (Ink Manga Pen)</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Hands-on practice using professional manga inking tools to master authentic Japanese drawing techniques.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Line Art, Strokes & Patterns</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Learning clean line work and texture techniques essential for professional manga illustration.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Manga Character Designs</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Understanding and drawing characters from scratch using traditional Japanese manga principles.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Bringing Reference Manga and Copying Them</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Studying and replicating styles from real manga to understand different artistic approaches and techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-orange-500 to-orange-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
