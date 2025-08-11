@@ -5,28 +5,29 @@ import {
   MapPin, 
   Clock, 
   IndianRupee, 
-  User, 
   GraduationCap, 
   Users, 
-  Phone,
-  Mail,
-  Star,
-  Award,
-  BookOpen,
-  Palette,
-  ChevronDown
+  Phone, 
+  Mail, 
+  Star, 
+  Award, 
+  BookOpen, 
+  Palette
 } from 'lucide-react';
+import mentorImage from './assets/images/mentor.png';
+import heroBg from './assets/images/hero_background.webp';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-50 to-white py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/100 to-white/80"></div>
+        <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 fill-current" />
-              First Time in Hyderabad
+              First Time in India
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               1-Day <span className="text-orange-500">Manga Art</span><br />
@@ -42,7 +43,7 @@ function App() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Register Now - ₹1,999 Only
+                Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
               </button>
               <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
                 Learn More
@@ -50,7 +51,7 @@ function App() {
             </div>
 
             {/* Workshop Details Cards */}
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <Calendar className="w-8 h-8 text-orange-500 mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Date</h3>
@@ -59,20 +60,12 @@ function App() {
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Location</h3>
-                <p className="text-gray-600 text-lg">IACG Intermediate College, Jubilee Hills</p>
+                <p className="text-gray-600 text-lg">IACG Multimedia College, Jubilee Hills</p>
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                 <Clock className="w-8 h-8 text-orange-500 mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Time</h3>
                 <p className="text-gray-600 text-lg">10 AM – 5 PM</p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <IndianRupee className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Fee</h3>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-gray-400 line-through">₹4,999</span>
-                  <span className="text-orange-500 font-bold text-lg">₹1,999</span>
-                </div>
               </div>
             </div>
           </div>
@@ -93,7 +86,7 @@ function App() {
               <CheckCircle className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Japanese Mentorship</h3>
-                <p className="text-gray-600">Learn from Kyoto Seika University-trained mentors with authentic Japanese techniques</p>
+                <p className="text-gray-600">Learn from the mentors of Kyoto Seika University with authentic Japanese techniques</p>
               </div>
             </div>
             
@@ -175,7 +168,7 @@ function App() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mb-8">
-                  <User className="w-16 h-16 text-white" />
+                  <img src={mentorImage} alt="Mentor" className="w-29 h-29 rounded-full object-cover block mb-0.5 mr-0.5"/>
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Ryoto</h3>
                 <div className="flex items-center gap-2 text-orange-500 mb-6">
