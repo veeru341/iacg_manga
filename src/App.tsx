@@ -195,7 +195,7 @@ function App() {
 
       {/* About University */}
       <section className="py-20 px-4 bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/qrhdfn0000000axl.jpg)' }}>
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
