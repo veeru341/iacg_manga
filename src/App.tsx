@@ -18,8 +18,14 @@ import mentorImage from './assets/images/mentor.png';
 import heroBg from './assets/images/hero_background.webp';
 
 function App() {
+  const scrollToRegister = () => {
+    const element = document.getElementById('register');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-24">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="absolute inset-0 bg-gradient-to-br from-white/100 to-white/80"></div>
@@ -41,7 +47,7 @@ function App() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button type="button" onClick={scrollToRegister} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
               </button>
               <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
@@ -147,7 +153,7 @@ function App() {
               <p className="text-2xl font-bold mb-2">You Save ₹3,000!</p>
               <p className="text-lg text-white/90">That's 60% off the regular price</p>
             </div>
-            <button className="bg-white text-orange-500 hover:bg-gray-100 px-12 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button type="button" onClick={scrollToRegister} className="bg-white text-orange-500 hover:bg-gray-100 px-12 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Register Now & Save ₹3,000
             </button>
           </div>
@@ -194,8 +200,8 @@ function App() {
       </section>
 
       {/* About University */}
-      <section className="py-20 px-4 bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/qrhdfn0000000axl.jpg)' }}>
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+      <section className="py-20 px-4 bg-cover bg-center relative opacity-100" style={{ backgroundImage: 'url(/images/qrhdfn0000000axl.jpg)' }}>
+        <div className="absolute inset-0 bg-black/70"></div>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -203,7 +209,7 @@ function App() {
             </h2>
           </div>
 
-          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 shadow-xl relative z-10">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 shadow-xl relative z-10 opacity-75">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <div className="flex items-center gap-4 mb-6">
@@ -511,7 +517,7 @@ function App() {
             </div>
           </div>
 
-          <button className="bg-white text-orange-500 hover:bg-gray-100 px-12 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8">
+          <button type="button" onClick={scrollToRegister} className="bg-white text-orange-500 hover:bg-gray-100 px-12 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8">
             Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
           </button>
 
@@ -552,7 +558,7 @@ function App() {
                 </div>
                 <div className="flex items-center gap-3 text-gray-400">
                   <Mail className="w-5 h-5 text-orange-500" />
-                  <span>info@iacg.co.in</span>
+                  <span>contactus@iacg.info</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-400">
                   <BookOpen className="w-5 h-5 text-orange-500" />
@@ -564,11 +570,122 @@ function App() {
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 IACG International Academy of Computer Graphics. All rights reserved.
+              © 2025 IACG International Academy of Computer Graphics. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
+      
+      {/* Registration Form Section */}
+      <section id="register" className="py-20 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Register Now</h2>
+            <p className="text-gray-600 mt-2">Fill in your details and we will get in touch shortly.</p>
+          </div>
+
+          <form
+            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 space-y-6"
+            onSubmit={(event) => {
+              event.preventDefault();
+              const formElement = event.currentTarget as HTMLFormElement;
+              const formData = new FormData(formElement);
+              const submission = Object.fromEntries(formData.entries());
+              console.log('Form submission:', submission);
+              alert('Thank you! Your registration has been received.');
+              formElement.reset();
+            }}
+          >
+            <div className="grid grid-cols-1 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your full name"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="mobile">Mobile</label>
+                <input
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
+                  required
+                  inputMode="tel"
+                  pattern="[0-9]{10,15}"
+                  placeholder="10-15 digit number"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="city">City</label>
+                <input
+                  id="city"
+                  name="city"
+                  type="text"
+                  required
+                  placeholder="Your city"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="experience">Any prior drawing experience?</label>
+                <select
+                  id="experience"
+                  name="experience"
+                  required
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select one</option>
+                  <option value="None">None</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-2">
+              <p className="text-sm text-gray-500">We respect your privacy. Your details are safe with us.</p>
+              <button
+                type="submit"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Submit Registration
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Sticky bottom CTA */}
+      <div className="fixed bottom-0 inset-x-0" style={{ backgroundColor: '#EDEFF4' }}>
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={scrollToRegister}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Register Now
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
