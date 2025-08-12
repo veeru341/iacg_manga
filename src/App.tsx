@@ -50,9 +50,6 @@ function App() {
               <button type="button" onClick={scrollToRegister} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Register Now - <span className="line-through">₹4,999</span> ₹1,999 Only
               </button>
-              <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
-                Learn More
-              </button>
             </div>
 
             {/* Workshop Details Cards */}
@@ -124,7 +121,7 @@ function App() {
             <p className="text-2xl font-bold text-gray-900 mb-8">
               Don't miss this chance to train with Japan's Mentor right here in Hyderabad!
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button type="button" onClick={scrollToRegister} className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Secure Your Spot Now
             </button>
           </div>
@@ -675,7 +672,7 @@ function App() {
       </section>
 
       {/* Sticky bottom CTA */}
-      <div className="fixed bottom-0 inset-x-0" style={{ backgroundColor: '#EDEFF4' }}>
+      <div className="fixed bottom-0 inset-x-0 z-50" style={{ backgroundColor: '#EDEFF4' }}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-center">
           <button
             type="button"
