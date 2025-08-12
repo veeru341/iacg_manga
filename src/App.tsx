@@ -194,15 +194,16 @@ function App() {
       </section>
 
       {/* About University */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-cover bg-center relative" style={{ backgroundImage: 'url(/images/qrhdfn0000000axl.jpg)' }}>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16 relative z-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               About <span className="text-orange-500">Kyoto Seika University</span>
             </h2>
           </div>
 
-          <div className="bg-white rounded-3xl p-12 shadow-xl">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 shadow-xl relative z-10">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <div className="flex items-center gap-4 mb-6">
