@@ -217,7 +217,7 @@ function App() {
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  Kyoto Seika University is the world’s first university to promote Manga & Anime in Japan. Renowned for its faculties in Art, Design, Manga, Media Creation, and Global Culture, it blends tradition with innovation to inspire creativity worldwide.
+                  Kyoto Seika University is the world's first university to promote Manga & Anime in Japan. Renowned for its faculties in Art, Design, Manga, Media Creation, and Global Culture, it blends tradition with innovation to inspire creativity worldwide.
                   In collaboration with IACG Multimedia College, Kyoto Seika recently shared artistic expertise through a cultural exchange and student tour to Japan, giving learners a unique global creative experience.
                 </p>
 
@@ -314,15 +314,22 @@ function App() {
       </section>
 
       {/* Key Takeaways */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white relative">
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="/images/workshop sample.jpg" 
+            alt="Workshop background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Key <span className="text-orange-500">Takeaways</span> from the Workshop
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto relative z-10">
             <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
                 <Palette className="w-8 h-8 text-white" />
@@ -361,6 +368,17 @@ function App() {
               <p className="text-gray-600 leading-relaxed">
                 Studying and replicating styles from real manga to understand different artistic approaches and techniques.
               </p>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center relative z-10">
+            <div className="max-w-2xl mx-auto">
+              <img 
+                src="/images/workshop sample.jpg" 
+                alt="Workshop sample artwork" 
+                className="w-full rounded-2xl shadow-xl border-4 border-white"
+              />
+              <p className="text-gray-600 mt-4 italic">Sample artwork from previous workshop sessions</p>
             </div>
           </div>
         </div>
