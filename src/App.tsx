@@ -1,4 +1,5 @@
 import React from 'react';
+import { appendForm } from './api/payment';
 import {
   CheckCircle,
   Calendar,
@@ -24,6 +25,7 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   return (
     <div className="min-h-screen bg-white pb-24">
       {/* Hero Section */}
@@ -583,14 +585,31 @@ function App() {
 
           <form
             className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 space-y-6"
-            onSubmit={(event) => {
+            onSubmit={async (event) => {
               event.preventDefault();
               const formElement = event.currentTarget as HTMLFormElement;
               const formData = new FormData(formElement);
               const submission = Object.fromEntries(formData.entries());
-              console.log('Form submission:', submission);
-              alert('Thank you! Your registration has been received.');
-              formElement.reset();
+              setIsSubmitting(true);
+              try {
+                const { redirectUrl } = await appendForm({
+                  name: String(submission.name || ''),
+                  mobile: String(submission.mobile || ''),
+                  email: String(submission.email || ''),
+                  city: String(submission.city || ''),
+                  experience: String(submission.experience || '')
+                });
+                if (redirectUrl) {
+                  window.location.href = redirectUrl;
+                  return;
+                }
+                alert('Submitted, but no payment link was returned.');
+              } catch (error) {
+                console.error('Submission failed', error);
+                alert('Submission failed. Please try again.');
+              } finally {
+                setIsSubmitting(false);
+              }
             }}
           >
             <div className="grid grid-cols-1 gap-6">
@@ -662,9 +681,10 @@ function App() {
               <p className="text-sm text-gray-500">We respect your privacy. Your details are safe with us.</p>
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                disabled={isSubmitting}
+                className="bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                Submit Registration
+                {isSubmitting ? 'Submitting...' : 'Submit Registration'}
               </button>
             </div>
           </form>
